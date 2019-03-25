@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width">
+    <title>Dashy</title>
+<style>
+.table-container
+{
+  max-width: 100%;
+
+  overflow-x: auto;
+}
+</style>
+  </head>
+  <body>
+    <main></main>
+    <div class=".table-container">
+      <table data-tableByDay data-reverse data-rows='
+        [
+          { "row": "Bombardier All Current Users", "id": "bombardier_allCurrentUsers", "prop": "allCurrentUsers" },
+          { "row": "Kubblammo All Current Users", "id": "kubblammo_allCurrentUsers", "prop": "allCurrentUsers" }
+        ]
+      '>
+      </table>
+    </div>
+
+    <script type="module" src="display/tableByDay.mjs"></script>
+    <script type="module" src="display/main.mjs"></script>
+  </body>
+</html>

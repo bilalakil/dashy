@@ -1,0 +1,16 @@
+[
+  {
+    "id": "bombardier_allCurrentUsers",
+    "type": "unity_allCurrentUsers",
+    "username": "abc",
+    "password": "123",
+    "project": "Bombardier"
+  },
+  {
+    "id": "kubblammo_allCurrentUsers",
+    "type": "unity_allCurrentUsers",
+    "username": "abc",
+    "password": "123",
+    "project": "Kubblammo"
+  }
+]
