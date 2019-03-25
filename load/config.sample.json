@@ -12,5 +12,11 @@
     "username": "abc",
     "password": "123",
     "project": "Kubblammo"
+  },
+  {
+    "id": "raiz_accountValue",
+    "type": "raiz_accountValue",
+    "username": "abc",
+    "password": "123"
   }
 ]

@@ -39,7 +39,7 @@ const display = (config, data) => {
           row => `<tr>
             <td>${row.row}</td>
             ${days
-              .map(day => `<td>${tableData[row.row][day]}</td>`)
+              .map(day => `<td>${tableData[row.row][day] || ''}</td>`)
               .join('')
             }
           </tr>`
