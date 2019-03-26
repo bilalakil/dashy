@@ -18,5 +18,10 @@
     "type": "raiz_accountValue",
     "username": "abc",
     "password": "123"
+  },
+  {
+    "id": "villagergame_twitterFollowers",
+    "type": "twitter_followers",
+    "username": "villagergame"
   }
 ]

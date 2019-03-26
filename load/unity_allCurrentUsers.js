@@ -52,6 +52,9 @@ module.exports = async (config, data) => {
 
     browser.close();
 
+    if (isNaN(allCurrentUsers))
+      throw new Error("All current users is not a number.");
+
     data.allCurrentUsers = allCurrentUsers;
   } catch (e) {
     browser.close();

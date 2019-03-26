@@ -1,5 +1,9 @@
 const display = (config, data) => {
-  const orderedDays = data.map(_ => _.date);
+  const relevantData = data.filter(
+    d => config.rows.find(r => r.id === d.id && r.prop in d)
+  );
+
+  const orderedDays = relevantData.map(_ => _.date);
   orderedDays.sort();
   if (config.reversed) orderedDays.reverse();
 
@@ -13,7 +17,7 @@ const display = (config, data) => {
       []
     );
 
-  const tableData = data.reduce(
+  const tableData = relevantData.reduce(
     (obj, d) => {
       const row = config.rows.find(_ => _.id === d.id && _.prop in d);
       if (!row) return obj;
@@ -35,15 +39,18 @@ const display = (config, data) => {
           <th></th>
           ${days.map(_ => `<th>${_}</th>`).join('')}
         </tr>
-        ${config.rows.map(
-          row => `<tr>
-            <td>${row.row}</td>
-            ${days
-              .map(day => `<td>${tableData[row.row][day] || ''}</td>`)
-              .join('')
-            }
-          </tr>`
-        ).join('\n')}
+        ${config.rows
+          .filter(_ => _.row in tableData)
+          .map(
+            row => `<tr>
+              <td>${row.row}</td>
+              ${days
+                .map(day => `<td>${tableData[row.row][day] || ''}</td>`)
+                .join('')
+              }
+            </tr>`
+          ).join('\n')
+        }
       </table>
     </div>
   `;

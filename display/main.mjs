@@ -1,6 +1,8 @@
+import header from './header.mjs';
 import tableByDay from './tableByDay.mjs';
 
 const displays = {
+  header,
   tableByDay,
 };
 

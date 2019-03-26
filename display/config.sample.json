@@ -1,5 +1,10 @@
 [
   {
+    "type": "header",
+    "level": 2,
+    "text": "Doodad Games"
+  },
+  {
     "type": "tableByDay",
     "rows": [
       {
@@ -11,6 +16,27 @@
         "row": "Kubblammo: All Current Users",
         "id": "kubblammo_allCurrentUsers",
         "prop": "allCurrentUsers"
+      },
+      { 
+        "row": "Twitter Followers",
+        "id": "villagergame_twitterFollowers",
+        "prop": "followers"
+      }
+    ],
+    "reversed": true
+  },
+  {
+    "type": "header",
+    "level": 2,
+    "text": "Personal"
+  },
+  {
+    "type": "tableByDay",
+    "rows": [
+      {
+        "row": "Raiz",
+        "id": "raiz",
+        "prop": "accountValue"
       }
     ],
     "reversed": true
