@@ -47,7 +47,7 @@ module.exports = async (config, data) => {
     await page.waitForSelector(userSelector);
     const allCurrentUsers = await page.$eval(
       userSelector,
-      s => parseInt(s.textContent.trim())
+      s => parseInt(s.textContent.replace(/[^0-9]/g, ''))
     );
 
     browser.close();

@@ -17,7 +17,7 @@ module.exports = async (config, data) => {
     await page.waitForSelector(followerSelector);
     const followers = await page.$eval(
       followerSelector,
-      s => parseInt(s.textContent.trim())
+      s => parseFloat(s.textContent.replace(/[^0-9.]/g, ''))
     );
 
     browser.close();
