@@ -36,7 +36,7 @@ module.exports = async (config, data) => {
     browser.close();
 
     if (isNaN(accountValue))
-      throw new Error("Account value is not a number.");
+      throw new Error('Account value is not a number.');
       
     data.accountValue = accountValue;
   } catch (e) {

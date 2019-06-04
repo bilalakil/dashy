@@ -23,7 +23,7 @@ module.exports = async (config, data) => {
     browser.close();
 
     if (isNaN(followers))
-      throw new Error("Followers is not a number.");
+      throw new Error('Followers is not a number.');
       
     data.followers = followers;
   } catch (e) {

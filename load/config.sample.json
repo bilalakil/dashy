@@ -4,14 +4,14 @@
     "type": "unity_allCurrentUsers",
     "username": "abc",
     "password": "123",
-    "project": "Bombardier"
+    "projectId": "abc123def456"
   },
   {
     "id": "kubblammo_allCurrentUsers",
     "type": "unity_allCurrentUsers",
     "username": "abc",
     "password": "123",
-    "project": "Kubblammo"
+    "projectId": "def456abc123"
   },
   {
     "id": "raiz_accountValue",
