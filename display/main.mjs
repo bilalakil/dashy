@@ -7,7 +7,7 @@ const displays = {
 };
 
 const run = async () => {
-  let req = await fetch('./data.txt');
+  let req = await fetch('./data.txt', { cache: 'no-cache' });
   const data = (await req.text())
     .trim()
     .split('\n')
