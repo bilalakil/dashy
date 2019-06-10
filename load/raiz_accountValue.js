@@ -1,15 +1,10 @@
-const puppeteer = require('puppeteer');
+const util = require('./util');
 
 module.exports = async (config, data) => {
-  const browser = await puppeteer.launch();
+  const browser = await util.puppeteer();
 
   try {
-    const page = await browser.newPage();
-    await page.setRequestInterception(true);
-    page.on('request', request => {
-      if (request.resourceType() === 'image') request.abort();
-      else request.continue();
-    });
+    const page = await util.newPage(browser);
 
     await page.goto('https://app.raizinvest.com.au/dashboard/account');
 
