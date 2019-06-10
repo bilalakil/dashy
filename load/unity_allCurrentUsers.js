@@ -1,25 +1,12 @@
 const util = require('./util');
 
 module.exports = async (config, data) => {
-  const browser = await util.puppeteer();
+  const browser = await util.puppeteer(config);
 
   try {
     const page = await util.newPage(browser);
 
     await page.goto(`https://analytics.cloud.unity3d.com/projects/${config.projectId}/segments/`);
-
-    await page.type(
-      '#conversations_create_session_form_email', 
-      config.username
-    );
-    await page.type(
-      '#conversations_create_session_form_password',
-      config.password
-    );
-    await page.$eval(
-      '#new_conversations_create_session_form',
-      form => form.submit()
-    );
 
     const userSelector = '.table-main .table-is-a-row:first-child .numeric-data';
     await page.waitForSelector(userSelector);

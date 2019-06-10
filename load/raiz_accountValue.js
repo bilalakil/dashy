@@ -1,25 +1,12 @@
 const util = require('./util');
 
 module.exports = async (config, data) => {
-  const browser = await util.puppeteer();
+  const browser = await util.puppeteer(config);
 
   try {
     const page = await util.newPage(browser);
 
     await page.goto('https://app.raizinvest.com.au/dashboard/account');
-
-    await page.type(
-      '.spec-login-email-input', 
-      config.username
-    );
-    await page.type(
-      '.spec-login-password-input',
-      config.password
-    );
-    await page.$eval(
-      '.spec-login-button',
-      btn => btn.click()
-    );
 
     const valueSelector = '.graph-header-center-value';
     await page.waitForSelector(valueSelector);

@@ -1,7 +1,7 @@
 const util = require('./util');
 
 module.exports = async (config, data) => {
-  const browser = await util.puppeteer();
+  const browser = await util.puppeteer(config);
 
   try {
     const page = await util.newPage(browser);

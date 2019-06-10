@@ -2,22 +2,72 @@
   {
     "id": "bombardier_allCurrentUsers",
     "type": "unity_allCurrentUsers",
-    "username": "abc",
-    "password": "123",
-    "projectId": "abc123def456"
+    "projectId": "abc123def456",
+    "cookies": [
+      {
+        "name": "_hashed_user_id",
+        "value": "abc",
+        "domain": ".unity.com",
+        "httpOnly": true,
+        "secure": true
+      },
+      {
+        "name": "ls",
+        "value": "def",
+        "domain": "api.unity.com",
+        "httpOnly": true,
+        "secure": true
+      },
+      {
+        "name": "me",
+        "value": "ghi",
+        "domain": "api.unity.com",
+        "expires": 1570476325000,
+        "httpOnly": true,
+        "secure": true
+      }
+    ]
   },
   {
     "id": "kubblammo_allCurrentUsers",
     "type": "unity_allCurrentUsers",
-    "username": "abc",
-    "password": "123",
-    "projectId": "def456abc123"
+    "projectId": "def456abc123",
+    "cookies": [
+      {
+        "name": "_hashed_user_id",
+        "value": "abc",
+        "domain": ".unity.com",
+        "httpOnly": true,
+        "secure": true
+      },
+      {
+        "name": "ls",
+        "value": "def",
+        "domain": "api.unity.com",
+        "httpOnly": true,
+        "secure": true
+      },
+      {
+        "name": "me",
+        "value": "ghi",
+        "domain": "api.unity.com",
+        "expires": 1570476325000,
+        "httpOnly": true,
+        "secure": true
+      }
+    ]
   },
   {
     "id": "raiz_accountValue",
     "type": "raiz_accountValue",
-    "username": "abc",
-    "password": "123"
+    "localStorage": [
+      {
+        "url": "https://app.raizinvest.com.au/",
+        "kvs": {
+          "authToken": "{\"key\":\"abc\",\"persistentKey\":null,\"environment\":\"production\"}"
+        }
+      }
+    ]
   },
   {
     "id": "villagergame_twitterFollowers",
