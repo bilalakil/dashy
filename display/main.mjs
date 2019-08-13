@@ -21,7 +21,7 @@ const run = async () => {
     })
     .filter(_ => _);
 
-  req = await fetch('display/config.json');
+  req = await fetch('display/config.json', { cache: 'no-cache' });
   const config = await req.json();
 
   const main = document.querySelector('main');
