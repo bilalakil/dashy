@@ -1,18 +1,22 @@
 const config = require('./config');
 
-const raiz_accountValue = require('./raiz_accountValue');
-const twitter_followers = require('./twitter_followers');
-const unity_allCurrentUsers = require('./unity_allCurrentUsers');
+const domExtract = require('./domExtract');
 
 const loaders = {
-  raiz_accountValue,
-  twitter_followers,
-  unity_allCurrentUsers,
+  domExtract,
 };
 
 const runSync = async () => {
+  const shortlist = process.argv.slice(2);
+
   for (const c of config) {
+    if (
+      shortlist.length !== 0
+      && shortlist.indexOf(c.id) === -1
+    ) continue;
+
     const data = { id: c.id, date: new Date() };
+
     try {
       await loaders[c.type](c, data);
     } catch (e) {

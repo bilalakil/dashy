@@ -1,77 +1,40 @@
 [
   {
-    "id": "bombardier_allCurrentUsers",
-    "type": "unity_allCurrentUsers",
-    "projectId": "abc123def456",
-    "cookies": [
-      {
-        "name": "_hashed_user_id",
-        "value": "abc",
-        "domain": ".unity.com",
-        "httpOnly": true,
-        "secure": true
-      },
-      {
-        "name": "ls",
-        "value": "def",
-        "domain": "api.unity.com",
-        "httpOnly": true,
-        "secure": true
-      },
-      {
-        "name": "me",
-        "value": "ghi",
-        "domain": "api.unity.com",
-        "expires": 1570476325000,
-        "httpOnly": true,
-        "secure": true
-      }
-    ]
-  },
-  {
     "id": "kubblammo_allCurrentUsers",
-    "type": "unity_allCurrentUsers",
-    "projectId": "def456abc123",
+    "type": "domExtract",
+    "url": "https://dashboard.unity3d.com/organizations/12369695754677/projects/c2b586c8-e77c-4836-a55e-06cf08f0ca83/analytics/segments",
     "cookies": [
       {
-        "name": "_hashed_user_id",
-        "value": "abc",
-        "domain": ".unity.com",
-        "httpOnly": true,
-        "secure": true
-      },
-      {
-        "name": "ls",
-        "value": "def",
-        "domain": "api.unity.com",
-        "httpOnly": true,
-        "secure": true
-      },
-      {
-        "name": "me",
-        "value": "ghi",
-        "domain": "api.unity.com",
-        "expires": 1570476325000,
-        "httpOnly": true,
+        "name": "token",
+        "value": "...",
+        "domain": ".dashboard.unity3d.com",
+        "httpOnly": false,
         "secure": true
       }
-    ]
+    ],
+    "selector": ".table-main .table-body .table-is-a-row .numeric-data"
   },
   {
-    "id": "raiz_accountValue",
-    "type": "raiz_accountValue",
+    "id": "raiz",
+    "type": "domExtract",
+    "url": "https://app.raizinvest.com.au/",
     "localStorage": [
       {
         "url": "https://app.raizinvest.com.au/",
         "kvs": {
-          "authToken": "{\"key\":\"abc\",\"persistentKey\":null,\"environment\":\"production\"}"
+          "authToken": "{\"key\":\"...\",\"persistentKey\":null,\"environment\":\"production\",\"rememberMe\":true,\"path\":\"/\",\"domain\":\"api-app.acornsau.com.au\",\"secure\":true,\"expires\":\"2020-05-09T05:32:28.888Z\"}"
         }
       }
-    ]
+    ],
+    "sessionStorage": {
+      "token": "..."
+    },
+    "selector": ".home__banner .page-content__banner-value"
   },
   {
-    "id": "villagergame_twitterFollowers",
-    "type": "twitter_followers",
-    "username": "villagergame"
+    "id": "bilalakil_twitterFollowers",
+    "type": "domExtract",
+    "url": "https://twitter.com/bilalakil",
+    "selector": "[href='/bilalakil/followers'] > *"
   }
 ]

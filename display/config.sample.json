@@ -7,11 +7,6 @@
   {
     "type": "tableByDay",
     "rows": [
-      {
-        "row": "Bombardier: All Current Users",
-        "id": "bombardier_allCurrentUsers",
-        "prop": "allCurrentUsers"
-      },
       { 
         "row": "Kubblammo: All Current Users",
         "id": "kubblammo_allCurrentUsers",
